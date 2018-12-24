@@ -11,7 +11,9 @@
     if($mybb_db->connect_errno)     die("MyBB db connection failed: ". $mybb_db->connect_error);
     
     $mybb_db->query("SET CHARSET 'utf8'");
+    $mybb_db->query("SET CHARACTER_SET 'utf8_unicode_ci'");
     $flarum_db->query("SET CHARSET 'utf8'");
+    $flarum_db->query("SET CHARACTER_SET 'utf8_unicode_ci'");
 
     $parent_tags = array();
     $user_ips = array();
